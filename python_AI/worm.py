@@ -59,11 +59,6 @@ shengfen_1=updata(url)
 shengfen_2=re.findall(r'cellpadding="1">(.*?)<script type=',shengfen_1,re.S)[0]
 xian=re.findall(r'<a href="(.*?)" title="(.*?)">(.*?)</a></td>',shengfen_2,re.S)
 # print(shengfen_3)
-# ###############################################县区######################################
-# for xian_1 in xian :
-#     url='http://www.tianqihoubao.com/%s' %xian_1[0]
-#     xian_ming=xian_1[2]
-#     print(xian_ming,url)
 
 
 # In[3]:
