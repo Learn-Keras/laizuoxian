@@ -1,0 +1,99 @@
+0:25 2019/12/7
+https://www.runoob.com/numpy/numpy-matplotlib.html
+import matplotlib.pyplot as plt
+
+
+plot()绘制图像线
+plot(*args, scalex=True, scaley=True, data=None, **kwargs)
+plot(x, y, color='green', marker='o', linestyle='dashed',linewidth=2, markersize=12)
+#画线，linewidth:线宽，linestyle:线形  color:线颜色
+
+show()展示图片
+figure()框样式
+figure(num=None, figsize=None, dpi=None, facecolor=None, edgecolor=None, 
+           frameon=True, FigureClass=<class 'matplotlib.figure.Figure'>, clear=False, **kwargs)
+-------------------------------------------------------------------------------------------------------
+坐标：
+xlim()限制x输出坐标          #修改显示坐标取值范围
+xlim((left, right))
+
+ylim()限制y输出坐标
+ylim((left, right))
+
+xlabel x标签     xlabel('名称')  #修改坐标名
+ylabel y标签     ylabel('名称')
+
+
+xticks (x数轴值）#修改坐标轴取值内容,传入两个列表，前一个数值，后一个文字替换
+yticks (y数轴值）
+eg:                 plt.yticks([1,2,3,4],['le','lr','lt','ly'])
+
+调整边框
+
+gca() 获取边框
+
+eg：ax.spines['right'].set_color('red')  #set_color:  设置颜色边框   spines：选边框
+
+spines['  ']边框 right、top、bottom、left
+
+spines['  '].set_color()颜色  set_position() 位置
+
+spines['  '].set_position()#调整边框位置
+eg： ax.spines['left'].set_position(('data',0))   #data:表示对资料   0：表示值为0的位置
+-------------------------------------------------------------------------------------------------------
+图例：
+plt.legend(handles,label,loc)   handles:输入的线，loc：位置
+eg:
+l1,=plt.plot(x,y1,linewidth=2.0)     #l1之后有一个逗号，没有逗号画不出来
+-------------------------------------------------------------------------------------------------------
+文字标注：
+
+annotate(  r'$     $',  xytext, textcoords,fontsize,arrowprops)
+
+plt.annotate(s, xy, *args, **kwargs)
+text()
+
+-------------------------------------------------------------------------------------------------------
+散点图：
+
+scatter(x,y,s,color,)#画点
+plt.scatter(0,1,s=50,color='b')
+plt.scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, 
+                    vmax=None, alpha=None, linewidths=None, verts=None, edgecolors=None, *, 
+                    plotnonfinite=False, data=None, **kwargs)
+#s:点的大小    c：表示点的颜色
+
+-------------------------------------------------------------------------------------------------------
+直方图
+
+bar()
+
+-------------------------------------------------------------------------------------------------------
+等高线图：
+np.meshgrid函数   生成网格点坐标矩阵
+contourf()画等高线面积
+contour()画等高线
+clable() ：描述出等高线
+-------------------------------------------------------------------------------------------------------
+3D图：
+from mpl_toolkits.mplot3d import Axes3D
+
+plot_surface()
+contourf()映射
+-------------------------------------------------------------------------------------------------------
+子图像：
+
+subplot()一个中做几个图像；
+-------------------------------------------------------------------------------------------------------
+动态图：form matplotlib import animation
+
+
+
+
+
+
+
+
+
+
+
